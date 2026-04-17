@@ -1,7 +1,6 @@
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Navbar from "@/components/Navbar";
 import HeroSplit from "@/components/HeroSplit";
-import ProductGrid from "@/components/ProductGrid";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,7 +10,6 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSplit />
-        <ProductGrid />
       </main>
       <Footer />
     </div>

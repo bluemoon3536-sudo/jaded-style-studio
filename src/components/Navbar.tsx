@@ -2,7 +2,7 @@ import { Search, Heart, ShoppingBag, Menu } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-white/10 backdrop-blur-xl supports-[backdrop-filter]:bg-white/10">
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20">
       <div className="flex items-center justify-between px-4 py-3">
         <a href="/" className="text-nav-foreground text-lg font-semibold tracking-tight">
           Jaded London

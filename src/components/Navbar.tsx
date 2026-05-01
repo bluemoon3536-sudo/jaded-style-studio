@@ -1,11 +1,12 @@
 import { Search, Heart, ShoppingBag, Menu } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl supports-[backdrop-filter]:bg-black/50">
       <div className="flex items-center justify-between px-4 py-3">
-        <a href="/" className="text-nav-foreground text-lg font-semibold tracking-tight">
-          Jaded London
+        <a href="/" className="flex items-center" aria-label="Home">
+          <img src={logo} alt="Logo" className="h-8 w-auto mix-blend-screen" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">

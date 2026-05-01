@@ -1,13 +1,7 @@
 import { Plus } from "lucide-react";
-
 import { useState } from "react";
-
-const collapsibleSections = [
-  {
-    title: "Customer Service",
-    links: ["Contact Us", "Delivery", "Returns", "Size Guide", "FAQ"],
-  },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const TikTokIcon = ({ size = 18 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -16,22 +10,34 @@ const TikTokIcon = ({ size = 18 }: { size?: number }) => (
 );
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [openSection, setOpenSection] = useState<string | null>(null);
+
+  const sections = [
+    {
+      key: "customerService",
+      title: t("footer.customerService"),
+      links: [
+        t("footer.links.contact"),
+        t("footer.links.delivery"),
+        t("footer.links.returns"),
+        t("footer.links.sizeGuide"),
+        t("footer.links.faq"),
+      ],
+    },
+  ];
 
   return (
     <footer className="bg-footer text-footer-foreground">
       <div className="px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {/* Collapsible link sections */}
           <div className="md:col-span-1 space-y-2 md:space-y-6">
-            {collapsibleSections.map((section) => (
-              <div key={section.title} className="border-b border-footer-border md:border-0 pb-2 md:pb-0">
+            {sections.map((section) => (
+              <div key={section.key} className="border-b border-footer-border md:border-0 pb-2 md:pb-0">
                 <button
                   className="flex items-center justify-between w-full py-2 md:py-0 md:cursor-default"
                   onClick={() =>
-                    setOpenSection(
-                      openSection === section.title ? null : section.title
-                    )
+                    setOpenSection(openSection === section.key ? null : section.key)
                   }
                 >
                   <h3 className="text-xs tracking-[0.2em] uppercase font-semibold text-footer-foreground">
@@ -40,14 +46,14 @@ const Footer = () => {
                   <Plus
                     size={14}
                     className={`text-footer-foreground md:hidden transition-transform ${
-                      openSection === section.title ? "rotate-45" : ""
+                      openSection === section.key ? "rotate-45" : ""
                     }`}
                   />
                 </button>
                 <ul
                   className={`mt-2 space-y-2 ${
-                    openSection === section.title ? "block" : "hidden"
-                  } md:hidden`}
+                    openSection === section.key ? "block" : "hidden"
+                  } md:block`}
                 >
                   {section.links.map((link) => (
                     <li key={link}>
@@ -64,10 +70,9 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Follow Us */}
           <div>
             <h3 className="text-xs tracking-[0.2em] uppercase font-semibold text-footer-foreground mb-6">
-              Follow Us
+              {t("footer.followUs")}
             </h3>
             <div className="flex items-center gap-5">
               <a href="https://www.instagram.com/svamp.studios/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-footer-foreground hover:opacity-60 transition-opacity">
@@ -83,24 +88,28 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Download App removed */}
-
-          {/* Stay Posted */}
           <div>
             <h3 className="text-xs tracking-[0.2em] uppercase font-semibold text-footer-foreground mb-6">
-              Stay Posted
+              {t("lang.label")}
+            </h3>
+            <LanguageSwitcher variant="footer" />
+          </div>
+
+          <div className="md:col-span-2">
+            <h3 className="text-xs tracking-[0.2em] uppercase font-semibold text-footer-foreground mb-6">
+              {t("footer.stayPosted")}
             </h3>
             <p className="text-footer-muted text-xs mb-4">
-              Sign up to our Newsletter for latest news, offers and updates.
+              {t("footer.newsletter")}
             </p>
             <div className="flex border border-footer-border">
               <input
                 type="email"
-                placeholder="Email"
+                placeholder={t("footer.email")}
                 className="flex-1 bg-transparent text-footer-foreground text-xs px-3 py-2.5 placeholder:text-footer-muted outline-none"
               />
               <button className="text-footer-foreground text-xs tracking-[0.1em] uppercase font-medium px-4 hover:opacity-60 transition-opacity">
-                Submit
+                {t("footer.submit")}
               </button>
             </div>
           </div>
@@ -109,7 +118,7 @@ const Footer = () => {
 
       <div className="border-t border-footer-border px-4 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-footer-muted text-[10px] tracking-wide">
-          © 2025 All rights reserved.
+          {t("footer.rights")}
         </p>
       </div>
     </footer>

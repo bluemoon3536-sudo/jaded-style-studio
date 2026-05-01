@@ -7,14 +7,6 @@ const collapsibleSections = [
     title: "Customer Service",
     links: ["Contact Us", "Delivery", "Returns", "Size Guide", "FAQ"],
   },
-  {
-    title: "Brand",
-    links: ["About Us", "Careers", "Sustainability", "Press"],
-  },
-  {
-    title: "Student Discount",
-    links: ["How It Works", "Verify Now", "Terms"],
-  },
 ];
 
 const TikTokIcon = ({ size = 18 }: { size?: number }) => (
@@ -78,49 +70,20 @@ const Footer = () => {
               Follow Us
             </h3>
             <div className="flex items-center gap-5">
-              <a href="#" aria-label="Instagram" className="text-footer-foreground hover:opacity-60 transition-opacity">
+              <a href="https://www.instagram.com/svamp.studios/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-footer-foreground hover:opacity-60 transition-opacity">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                 </svg>
               </a>
-              <a href="#" aria-label="YouTube" className="text-footer-foreground hover:opacity-60 transition-opacity">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/>
-                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="TikTok" className="text-footer-foreground hover:opacity-60 transition-opacity">
+              <a href="https://www.tiktok.com/@svamp.studio" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-footer-foreground hover:opacity-60 transition-opacity">
                 <TikTokIcon size={18} />
               </a>
             </div>
           </div>
 
-          {/* Download App */}
-          <div>
-            <h3 className="text-xs tracking-[0.2em] uppercase font-semibold text-footer-foreground mb-6">
-              Download App
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="flex items-center gap-2 text-footer-foreground text-xs hover:opacity-60 transition-opacity">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                  </svg>
-                  iOS
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex items-center gap-2 text-footer-foreground text-xs hover:opacity-60 transition-opacity">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M3 20.5V3.5c0-.4.2-.7.5-.9l9.9 9.4-9.9 9.4c-.3-.2-.5-.5-.5-.9zm12.4-7.7l2.4 2.3-11.7 6.6 9.3-8.9zm0-1.6L6.1 2.3l11.7 6.6-2.4 2.3zm5.1 1.6c.3.2.5.5.5.8s-.2.6-.5.8l-2.7 1.5-2.6-2.3 2.6-2.3 2.7 1.5z" />
-                  </svg>
-                  Android
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Download App removed */}
 
           {/* Stay Posted */}
           <div>

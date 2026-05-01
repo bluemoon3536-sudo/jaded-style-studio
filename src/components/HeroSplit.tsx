@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import heroWomen from "@/assets/hero-women.jpg";
 import heroMen from "@/assets/hero-men.jpg";
 
 const HeroSplit = () => {
   return (
     <section className="flex flex-col md:flex-row w-full h-[85vh] md:h-[90vh]">
-      <a
-        href="#"
+      <Link
+        to="/womenswear"
         className="relative flex-1 overflow-hidden group cursor-pointer"
       >
         <img
@@ -21,10 +22,10 @@ const HeroSplit = () => {
             Womenswear
           </h2>
         </div>
-      </a>
+      </Link>
 
-      <a
-        href="#"
+      <Link
+        to="/menswear"
         className="relative flex-1 overflow-hidden group cursor-pointer"
       >
         <img
@@ -40,7 +41,7 @@ const HeroSplit = () => {
             Menswear
           </h2>
         </div>
-      </a>
+      </Link>
     </section>
   );
 };

@@ -1,55 +1,60 @@
 import { useState } from "react";
 import { Search, ShoppingBag, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.jpg";
 import { useCart } from "@/context/CartContext";
 import SearchOverlay from "./SearchOverlay";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const { count, openCart } = useCart();
+  const { t } = useTranslation();
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <>
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl supports-[backdrop-filter]:bg-black/50">
         <div className="flex items-center justify-between px-4 py-3">
-          <a href="/" className="flex items-center" aria-label="Home">
+          <Link to="/" className="flex items-center" aria-label="Home">
             <img src={logo} alt="Logo" className="h-8 w-auto mix-blend-screen" />
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="/womenswear" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              Women
-            </a>
-            <a href="/menswear" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              Men
+            <Link to="/womenswear" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
+              {t("nav.women")}
+            </Link>
+            <Link to="/menswear" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
+              {t("nav.men")}
+            </Link>
+            <a href="#" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
+              {t("nav.denim")}
             </a>
             <a href="#" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              Denim
-            </a>
-            <a href="#" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              New In
+              {t("nav.newIn")}
             </a>
           </div>
 
           <div className="flex items-center gap-4">
+            <LanguageSwitcher />
             <button
               onClick={() => setSearchOpen(true)}
               className="text-nav-foreground hover:opacity-60 transition-opacity"
-              aria-label="Search"
+              aria-label={t("nav.search")}
             >
               <Search size={18} strokeWidth={1.5} />
             </button>
             <button
               onClick={openCart}
               className="text-nav-foreground hover:opacity-60 transition-opacity relative"
-              aria-label="Cart"
+              aria-label={t("nav.cart")}
             >
               <ShoppingBag size={18} strokeWidth={1.5} />
               <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[9px] min-w-3.5 h-3.5 px-1 flex items-center justify-center rounded-full">
                 {count}
               </span>
             </button>
-            <button className="text-nav-foreground hover:opacity-60 transition-opacity md:hidden" aria-label="Menu">
+            <button className="text-nav-foreground hover:opacity-60 transition-opacity md:hidden" aria-label={t("nav.menu")}>
               <Menu size={20} strokeWidth={1.5} />
             </button>
           </div>

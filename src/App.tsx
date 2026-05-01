@@ -7,23 +7,28 @@ import Index from "./pages/Index.tsx";
 import Womenswear from "./pages/Womenswear.tsx";
 import Menswear from "./pages/Menswear.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import { CartProvider } from "./context/CartContext";
+import CartDrawer from "./components/CartDrawer";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/womenswear" element={<Womenswear />} />
-          <Route path="/menswear" element={<Menswear />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/womenswear" element={<Womenswear />} />
+            <Route path="/menswear" element={<Menswear />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+        <CartDrawer />
+      </CartProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

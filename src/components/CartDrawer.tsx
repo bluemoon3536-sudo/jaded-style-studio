@@ -8,7 +8,7 @@ const CartDrawer = () => {
 
   return (
     <Sheet open={isOpen} onOpenChange={(o) => !o && closeCart()}>
-      <SheetContent className="flex flex-col w-full sm:max-w-md">
+      <SheetContent className="flex flex-col w-full sm:max-w-md bg-black/60 backdrop-blur-xl supports-[backdrop-filter]:bg-black/50 border-white/10 text-nav-foreground">
         <SheetHeader>
           <SheetTitle>Sepet ({count})</SheetTitle>
         </SheetHeader>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, ShoppingBag, Menu } from "lucide-react";
+import { Search, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.jpg";
@@ -22,7 +22,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-8" />
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <LanguageSwitcher />
             <button
               onClick={() => setSearchOpen(true)}
@@ -40,9 +40,6 @@ const Navbar = () => {
               <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[9px] min-w-3.5 h-3.5 px-1 flex items-center justify-center rounded-full">
                 {count}
               </span>
-            </button>
-            <button className="text-nav-foreground hover:opacity-60 transition-opacity md:hidden" aria-label={t("nav.menu")}>
-              <Menu size={20} strokeWidth={1.5} />
             </button>
           </div>
         </div>

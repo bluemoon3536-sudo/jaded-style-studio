@@ -6,10 +6,10 @@ import heroMen from "@/assets/hero-men.jpg";
 const HeroSplit = () => {
   const { t } = useTranslation();
   return (
-    <section className="flex flex-col md:flex-row w-full h-[85vh] md:h-[90vh]">
+    <section className="flex flex-col md:flex-row w-full md:h-[90vh]">
       <Link
         to="/womenswear"
-        className="relative flex-1 overflow-hidden group cursor-pointer"
+        className="relative flex-1 overflow-hidden group cursor-pointer h-[50vh] md:h-auto"
       >
         <img
           src={heroWomen}
@@ -28,7 +28,7 @@ const HeroSplit = () => {
 
       <Link
         to="/menswear"
-        className="relative flex-1 overflow-hidden group cursor-pointer"
+        className="relative flex-1 overflow-hidden group cursor-pointer h-[50vh] md:h-auto"
       >
         <img
           src={heroMen}

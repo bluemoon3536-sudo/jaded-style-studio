@@ -20,20 +20,7 @@ const Navbar = () => {
             <img src={logo} alt="Logo" className="h-8 w-auto mix-blend-screen" />
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            <Link to="/womenswear" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              {t("nav.women")}
-            </Link>
-            <Link to="/menswear" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              {t("nav.men")}
-            </Link>
-            <a href="#" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              {t("nav.denim")}
-            </a>
-            <a href="#" className="text-nav-foreground text-sm font-medium tracking-wide hover:opacity-60 transition-opacity">
-              {t("nav.newIn")}
-            </a>
-          </div>
+          <div className="hidden md:flex items-center gap-8" />
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher />

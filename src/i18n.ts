@@ -8,6 +8,18 @@ const resources = {
       nav: { women: "Women", men: "Men", denim: "Denim", newIn: "New In", search: "Search", cart: "Cart", menu: "Menu" },
       hero: { women: "Womenswear", men: "Menswear" },
       page: { comingSoon: "New collection coming soon." },
+      mens: {
+        heroTagline: "The new drop is here",
+        heroCta: "Shop the collection",
+        shopByCategory: "Shop by category",
+        categories: { tops: "Tops", bottoms: "Bottoms", outerwear: "Outerwear", denim: "Denim", accessories: "Accessories", all: "Shop all" },
+        featured: "Featured",
+        newArrivals: "New arrivals",
+        viewAll: "View all",
+        editorialTitle: "Built for the night",
+        editorialText: "Bold silhouettes, raw textures and statement pieces designed to be lived in.",
+        editorialCta: "Explore"
+      },
       search: { placeholder: "Search...", suggestions: "Suggestions", close: "Close" },
       cart: { title: "Cart", empty: "Your cart is empty.", total: "Total", checkout: "Checkout", remove: "Remove", increase: "Increase", decrease: "Decrease" },
       footer: {
@@ -31,6 +43,18 @@ const resources = {
       nav: { women: "Kadın", men: "Erkek", denim: "Denim", newIn: "Yeni Gelenler", search: "Ara", cart: "Sepet", menu: "Menü" },
       hero: { women: "Kadın Koleksiyonu", men: "Erkek Koleksiyonu" },
       page: { comingSoon: "Yeni koleksiyon yakında burada." },
+      mens: {
+        heroTagline: "Yeni koleksiyon burada",
+        heroCta: "Koleksiyonu keşfet",
+        shopByCategory: "Kategoriye göre alışveriş",
+        categories: { tops: "Üst Giyim", bottoms: "Alt Giyim", outerwear: "Dış Giyim", denim: "Denim", accessories: "Aksesuar", all: "Tümünü gör" },
+        featured: "Öne Çıkanlar",
+        newArrivals: "Yeni gelenler",
+        viewAll: "Tümünü gör",
+        editorialTitle: "Gece için tasarlandı",
+        editorialText: "Cesur siluetler, ham dokular ve giyilmek için tasarlanmış iddialı parçalar.",
+        editorialCta: "Keşfet"
+      },
       search: { placeholder: "Ara...", suggestions: "Öneriler", close: "Kapat" },
       cart: { title: "Sepet", empty: "Sepetin boş.", total: "Toplam", checkout: "Ödemeye Geç", remove: "Kaldır", increase: "Arttır", decrease: "Azalt" },
       footer: {
@@ -54,6 +78,18 @@ const resources = {
       nav: { women: "Damen", men: "Herren", denim: "Denim", newIn: "Neuheiten", search: "Suche", cart: "Warenkorb", menu: "Menü" },
       hero: { women: "Damenmode", men: "Herrenmode" },
       page: { comingSoon: "Neue Kollektion bald verfügbar." },
+      mens: {
+        heroTagline: "Die neue Kollektion ist da",
+        heroCta: "Kollektion entdecken",
+        shopByCategory: "Nach Kategorie shoppen",
+        categories: { tops: "Oberteile", bottoms: "Hosen", outerwear: "Jacken", denim: "Denim", accessories: "Accessoires", all: "Alles anzeigen" },
+        featured: "Highlights",
+        newArrivals: "Neuheiten",
+        viewAll: "Alle ansehen",
+        editorialTitle: "Gemacht für die Nacht",
+        editorialText: "Mutige Silhouetten, rohe Texturen und Statement-Pieces zum Tragen.",
+        editorialCta: "Entdecken"
+      },
       search: { placeholder: "Suchen...", suggestions: "Vorschläge", close: "Schließen" },
       cart: { title: "Warenkorb", empty: "Dein Warenkorb ist leer.", total: "Gesamt", checkout: "Zur Kasse", remove: "Entfernen", increase: "Erhöhen", decrease: "Verringern" },
       footer: {
@@ -77,6 +113,18 @@ const resources = {
       nav: { women: "Femme", men: "Homme", denim: "Denim", newIn: "Nouveautés", search: "Rechercher", cart: "Panier", menu: "Menu" },
       hero: { women: "Collection Femme", men: "Collection Homme" },
       page: { comingSoon: "Nouvelle collection bientôt disponible." },
+      mens: {
+        heroTagline: "La nouvelle collection est arrivée",
+        heroCta: "Découvrir la collection",
+        shopByCategory: "Shopper par catégorie",
+        categories: { tops: "Hauts", bottoms: "Bas", outerwear: "Vestes", denim: "Denim", accessories: "Accessoires", all: "Tout voir" },
+        featured: "À la une",
+        newArrivals: "Nouveautés",
+        viewAll: "Tout voir",
+        editorialTitle: "Conçu pour la nuit",
+        editorialText: "Silhouettes audacieuses, textures brutes et pièces fortes à vivre.",
+        editorialCta: "Explorer"
+      },
       search: { placeholder: "Rechercher...", suggestions: "Suggestions", close: "Fermer" },
       cart: { title: "Panier", empty: "Votre panier est vide.", total: "Total", checkout: "Passer la commande", remove: "Supprimer", increase: "Augmenter", decrease: "Diminuer" },
       footer: {

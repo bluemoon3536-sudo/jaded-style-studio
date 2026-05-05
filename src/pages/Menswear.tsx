@@ -36,18 +36,12 @@ const Menswear = () => {
         </section>
 
         {/* EDITORIAL BANNER */}
-        <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
-          <img
-            src={heroMen}
-            alt={t("mens.editorialTitle")}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 flex flex-col items-start justify-center px-6 md:px-20 max-w-2xl">
-            <h3 className="text-hero-text text-3xl md:text-5xl font-light tracking-[0.15em] uppercase mb-4 leading-tight">
+        <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-foreground text-2xl md:text-4xl font-light tracking-[0.15em] uppercase mb-6 leading-tight">
               {t("mens.editorialTitle")}
             </h3>
-            <p className="text-hero-text/80 text-sm md:text-base font-light max-w-md mb-6 leading-relaxed">
+            <p className="text-muted-foreground text-sm md:text-base font-light leading-relaxed">
               {t("mens.editorialText")}
             </p>
           </div>

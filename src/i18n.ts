@@ -20,6 +20,12 @@ const resources = {
         editorialText: "Bold silhouettes, raw textures and statement pieces designed to be lived in.",
         editorialCta: "Explore"
       },
+      womens: {
+        heroTagline: "The new drop is here",
+        heroCta: "Shop the collection",
+        editorialTitle: "Effortless femininity",
+        editorialText: "Soft tailoring, fluid silhouettes and refined details designed to move with you."
+      },
       search: { placeholder: "Search...", suggestions: "Suggestions", close: "Close" },
       cart: { title: "Cart", empty: "Your cart is empty.", total: "Total", checkout: "Checkout", remove: "Remove", increase: "Increase", decrease: "Decrease" },
       footer: {
@@ -54,6 +60,12 @@ const resources = {
         editorialTitle: "Gece için tasarlandı",
         editorialText: "Cesur siluetler, ham dokular ve giyilmek için tasarlanmış iddialı parçalar.",
         editorialCta: "Keşfet"
+      },
+      womens: {
+        heroTagline: "Yeni koleksiyon burada",
+        heroCta: "Koleksiyonu keşfet",
+        editorialTitle: "Zahmetsiz feminenlik",
+        editorialText: "Yumuşak kesimler, akıcı siluetler ve seninle birlikte hareket eden zarif detaylar."
       },
       search: { placeholder: "Ara...", suggestions: "Öneriler", close: "Kapat" },
       cart: { title: "Sepet", empty: "Sepetin boş.", total: "Toplam", checkout: "Ödemeye Geç", remove: "Kaldır", increase: "Arttır", decrease: "Azalt" },
@@ -90,6 +102,12 @@ const resources = {
         editorialText: "Mutige Silhouetten, rohe Texturen und Statement-Pieces zum Tragen.",
         editorialCta: "Entdecken"
       },
+      womens: {
+        heroTagline: "Die neue Kollektion ist da",
+        heroCta: "Kollektion entdecken",
+        editorialTitle: "Mühelose Weiblichkeit",
+        editorialText: "Weiche Schnitte, fließende Silhouetten und feine Details, die sich mit dir bewegen."
+      },
       search: { placeholder: "Suchen...", suggestions: "Vorschläge", close: "Schließen" },
       cart: { title: "Warenkorb", empty: "Dein Warenkorb ist leer.", total: "Gesamt", checkout: "Zur Kasse", remove: "Entfernen", increase: "Erhöhen", decrease: "Verringern" },
       footer: {
@@ -124,6 +142,12 @@ const resources = {
         editorialTitle: "Conçu pour la nuit",
         editorialText: "Silhouettes audacieuses, textures brutes et pièces fortes à vivre.",
         editorialCta: "Explorer"
+      },
+      womens: {
+        heroTagline: "La nouvelle collection est arrivée",
+        heroCta: "Découvrir la collection",
+        editorialTitle: "Féminité sans effort",
+        editorialText: "Coupes douces, silhouettes fluides et détails raffinés qui bougent avec vous."
       },
       search: { placeholder: "Rechercher...", suggestions: "Suggestions", close: "Fermer" },
       cart: { title: "Panier", empty: "Votre panier est vide.", total: "Total", checkout: "Passer la commande", remove: "Supprimer", increase: "Augmenter", decrease: "Diminuer" },

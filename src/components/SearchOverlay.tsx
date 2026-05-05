@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Search, X } from "lucide-react";
 
 type Props = {
@@ -6,10 +7,14 @@ type Props = {
   onClose: () => void;
 };
 
-const SUGGESTIONS = ["Denim", "Womenswear", "Menswear", "New In", "Jacket", "T-shirt"];
+const SUGGESTIONS = [
+  { label: "Womenswear", path: "/womenswear" },
+  { label: "Menswear", path: "/menswear" },
+];
 
 const SearchOverlay = ({ open, onClose }: Props) => {
   const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!open) return;
@@ -21,8 +26,14 @@ const SearchOverlay = ({ open, onClose }: Props) => {
   if (!open) return null;
 
   const filtered = query
-    ? SUGGESTIONS.filter((s) => s.toLowerCase().includes(query.toLowerCase()))
+    ? SUGGESTIONS.filter((s) => s.label.toLowerCase().includes(query.toLowerCase()))
     : SUGGESTIONS;
+
+  const go = (path: string) => {
+    onClose();
+    setQuery("");
+    navigate(path);
+  };
 
   return (
     <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md">
@@ -47,12 +58,12 @@ const SearchOverlay = ({ open, onClose }: Props) => {
           </p>
           <ul className="space-y-2">
             {filtered.map((s) => (
-              <li key={s}>
+              <li key={s.path}>
                 <button
-                  onClick={() => setQuery(s)}
+                  onClick={() => go(s.path)}
                   className="text-white/90 hover:text-white text-base"
                 >
-                  {s}
+                  {s.label}
                 </button>
               </li>
             ))}

@@ -35,18 +35,6 @@ const Womenswear = () => {
           </div>
         </section>
 
-        {/* EDITORIAL BANNER */}
-        <section className="container mx-auto px-6 md:px-12 py-16 md:py-24">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-foreground text-2xl md:text-4xl font-light tracking-[0.15em] uppercase mb-6 leading-tight">
-              {t("womens.editorialTitle")}
-            </h3>
-            <p className="text-muted-foreground text-sm md:text-base font-light leading-relaxed">
-              {t("womens.editorialText")}
-            </p>
-          </div>
-        </section>
-
         {/* PRODUCTS PLACEHOLDER */}
         <section className="container mx-auto px-4 py-20 md:py-28 text-center">
           <p className="text-muted-foreground text-sm md:text-base tracking-[0.15em] uppercase">

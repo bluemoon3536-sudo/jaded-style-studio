@@ -16,7 +16,7 @@ const Womenswear = () => {
           <img
             src={heroWomen}
             alt={t("hero.women")}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-12 md:pb-20 px-4 text-center">

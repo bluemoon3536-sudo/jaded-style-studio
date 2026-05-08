@@ -1,72 +1,85 @@
-import { useCart } from "@/context/CartContext";
-import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.jpg";
-import product5 from "@/assets/product-5.jpg";
-import product6 from "@/assets/product-6.jpg";
-import product7 from "@/assets/product-7.jpg";
-import product8 from "@/assets/product-8.jpg";
+import { Link } from "react-router-dom";
+import { Loader2 } from "lucide-react";
+import { useCartStore } from "@/stores/cartStore";
+import { useShopifyProducts } from "@/hooks/useShopifyProducts";
+import { formatPrice } from "@/lib/shopify";
 
-const products = [
-  { id: 1, name: "Oversized Graphic Tee", price: 72, image: product1, badge: "New" },
-  { id: 2, name: "Cargo Jogger Pants", price: 110, image: product2 },
-  { id: 3, name: "Cropped Hoodie", price: 95, image: product3, badge: "Trending" },
-  { id: 4, name: "Printed Wide-Leg Jeans", price: 140, image: product4 },
-  { id: 5, name: "Neon Mesh Top", price: 68, image: product5, badge: "New" },
-  { id: 6, name: "Distressed Denim Jacket", price: 155, image: product6 },
-  { id: 7, name: "Parachute Cargo Shorts", price: 100, image: product7 },
-  { id: 8, name: "Lace-Up Corset Top", price: 120, image: product8, badge: "Selling Fast" },
-];
+interface ProductGridProps {
+  query?: string;
+  title?: string;
+}
 
-const ProductGrid = () => {
-  const { addItem } = useCart();
+const ProductGrid = ({ query, title = "Trending Now" }: ProductGridProps) => {
+  const { products, loading } = useShopifyProducts(query);
+  const addItem = useCartStore((s) => s.addItem);
+  const isLoading = useCartStore((s) => s.isLoading);
 
   return (
     <section className="px-4 py-16">
       <h2 className="text-foreground text-center text-xs tracking-[0.3em] uppercase font-medium mb-12">
-        Trending Now
+        {title}
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8">
-        {products.map((product) => (
-          <div key={product.id} className="group">
-            <div className="relative overflow-hidden mb-3 aspect-[3/4] bg-secondary">
-              <img
-                src={product.image}
-                alt={product.name}
-                loading="lazy"
-                width={800}
-                height={1024}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              {product.badge && (
-                <span className="absolute top-2 left-2 bg-product-badge text-product-badge-foreground text-[9px] tracking-[0.1em] uppercase px-2 py-1 font-medium">
-                  {product.badge}
-                </span>
-              )}
-              <button
-                onClick={() =>
-                  addItem({
-                    id: String(product.id),
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                  })
-                }
-                className="absolute bottom-0 left-0 right-0 bg-foreground text-background text-[10px] tracking-[0.2em] uppercase py-3 opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                Sepete Ekle
-              </button>
-            </div>
-            <p className="text-foreground text-xs font-medium tracking-wide leading-tight">
-              {product.name}
-            </p>
-            <p className="text-muted-foreground text-xs mt-1">
-              ${product.price.toFixed(2)}
-            </p>
-          </div>
-        ))}
-      </div>
+
+      {loading ? (
+        <div className="flex justify-center py-20">
+          <Loader2 className="animate-spin" />
+        </div>
+      ) : products.length === 0 ? (
+        <p className="text-center text-muted-foreground text-sm">No products found</p>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8">
+          {products.map((p) => {
+            const variant = p.node.variants.edges[0]?.node;
+            const image = p.node.images.edges[0]?.node;
+            return (
+              <div key={p.node.id} className="group">
+                <Link
+                  to={`/product/${p.node.handle}`}
+                  className="relative overflow-hidden mb-3 aspect-[3/4] bg-secondary block"
+                >
+                  {image && (
+                    <img
+                      src={image.url}
+                      alt={image.altText ?? p.node.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (!variant) return;
+                      addItem({
+                        product: p,
+                        variantId: variant.id,
+                        variantTitle: variant.title,
+                        price: variant.price,
+                        quantity: 1,
+                        selectedOptions: variant.selectedOptions || [],
+                      });
+                    }}
+                    disabled={!variant || isLoading}
+                    className="absolute bottom-0 left-0 right-0 bg-foreground text-background text-[10px] tracking-[0.2em] uppercase py-3 opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-50"
+                  >
+                    Sepete Ekle
+                  </button>
+                </Link>
+                <Link to={`/product/${p.node.handle}`}>
+                  <p className="text-foreground text-xs font-medium tracking-wide leading-tight">
+                    {p.node.title}
+                  </p>
+                  <p className="text-muted-foreground text-xs mt-1">
+                    {formatPrice(
+                      p.node.priceRange.minVariantPrice.amount,
+                      p.node.priceRange.minVariantPrice.currencyCode
+                    )}
+                  </p>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 };

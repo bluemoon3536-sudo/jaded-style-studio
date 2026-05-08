@@ -3,12 +3,14 @@ import { Search, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.jpg";
-import { useCart } from "@/context/CartContext";
+import { useCartStore } from "@/stores/cartStore";
 import SearchOverlay from "./SearchOverlay";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
-  const { count, openCart } = useCart();
+  const items = useCartStore((s) => s.items);
+  const openCart = useCartStore((s) => s.openCart);
+  const count = items.reduce((sum, i) => sum + i.quantity, 0);
   const { t } = useTranslation();
   const [searchOpen, setSearchOpen] = useState(false);
 

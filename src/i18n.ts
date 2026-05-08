@@ -116,6 +116,40 @@ const resources = {
           contact: "İletişim", delivery: "Teslimat", returns: "İadeler", sizeGuide: "Beden Rehberi", faq: "SSS"
         }
       },
+      info: {
+        contact: [
+          "Sizden haber almak isteriz. Sipariş, ürün veya iş birlikleri hakkındaki sorularınız için bize ulaşın.",
+          "E-posta: hello@svamp.studio",
+          "Instagram: @svamp.studios",
+          "Yanıt süremiz 1–2 iş günüdür."
+        ],
+        delivery: [
+          "Tüm dünyaya stüdyomuzdan kargolama yapıyoruz. Siparişler 1–3 iş günü içinde hazırlanır.",
+          "Standart teslimat: 3–7 iş günü.",
+          "Hızlı teslimat: 1–3 iş günü.",
+          "Kargo ücretleri ödeme adımında varış noktasına göre hesaplanır."
+        ],
+        returns: [
+          "Etiketleri üzerinde, kullanılmamış ürünler için teslimat tarihinden itibaren 14 gün içinde iade kabul ediyoruz.",
+          "İade başlatmak için sipariş numaranızla hello@svamp.studio adresine yazın.",
+          "İade ürünü tarafımıza ulaştıktan sonra para iadeniz 7 iş günü içinde yapılır.",
+          "İndirimli ürünler ve aksesuarlar iade edilemez."
+        ],
+        sizeGuide: [
+          "Parçalarımız rahat bir kalıpla tasarlanmıştır. İki beden arasında kaldıysanız, daha oturan bir görünüm için küçük, oversize için büyük bedeni öneririz.",
+          "XS: göğüs 86 cm / bel 68 cm",
+          "S: göğüs 92 cm / bel 74 cm",
+          "M: göğüs 98 cm / bel 80 cm",
+          "L: göğüs 104 cm / bel 86 cm",
+          "XL: göğüs 110 cm / bel 92 cm"
+        ],
+        faq: [
+          "Ürünleriniz nerede üretiliyor? — Stüdyomuzda tasarlanır, güvendiğimiz iş ortaklarıyla küçük partiler halinde üretilir.",
+          "Hangi ödeme yöntemlerini kabul ediyorsunuz? — Tüm büyük kredi kartları ve dijital cüzdanlar.",
+          "Siparişimi değiştirebilir veya iptal edebilir miyim? — Sipariş verdikten sonraki 12 saat içinde bize ulaşın.",
+          "Tükenen ürünler tekrar gelir mi? — Bazı parçalar tekrar gelir, güncellemeler için Instagram'dan bizi takip edin."
+        ]
+      },
       lang: { label: "Dil" }
     },
   },

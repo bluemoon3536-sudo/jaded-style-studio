@@ -44,7 +44,7 @@ const resources = {
       info: {
         contact: [
           "We'd love to hear from you. For any questions about orders, products or collaborations, reach out to our team.",
-          "Email: hello@svamp.studio",
+          "Email: svampstudios.com@svampstudios.com",
           "Instagram: @svamp.studios",
           "We aim to reply within 1–2 business days."
         ],
@@ -56,7 +56,7 @@ const resources = {
         ],
         returns: [
           "We offer returns within 14 days of delivery on unworn items in original condition with tags attached.",
-          "To start a return, contact us at hello@svamp.studio with your order number.",
+          "To start a return, contact us at svampstudios.com@svampstudios.com with your order number.",
           "Refunds are processed within 7 business days after we receive your return.",
           "Sale items and accessories are final sale."
         ],
@@ -119,7 +119,7 @@ const resources = {
       info: {
         contact: [
           "Sizden haber almak isteriz. Sipariş, ürün veya iş birlikleri hakkındaki sorularınız için bize ulaşın.",
-          "E-posta: hello@svamp.studio",
+          "E-posta: svampstudios.com@svampstudios.com",
           "Instagram: @svamp.studios",
           "Yanıt süremiz 1–2 iş günüdür."
         ],
@@ -131,7 +131,7 @@ const resources = {
         ],
         returns: [
           "Etiketleri üzerinde, kullanılmamış ürünler için teslimat tarihinden itibaren 14 gün içinde iade kabul ediyoruz.",
-          "İade başlatmak için sipariş numaranızla hello@svamp.studio adresine yazın.",
+          "İade başlatmak için sipariş numaranızla svampstudios.com@svampstudios.com adresine yazın.",
           "İade ürünü tarafımıza ulaştıktan sonra para iadeniz 7 iş günü içinde yapılır.",
           "İndirimli ürünler ve aksesuarlar iade edilemez."
         ],
@@ -194,7 +194,7 @@ const resources = {
       info: {
         contact: [
           "Wir freuen uns, von dir zu hören. Bei Fragen zu Bestellungen, Produkten oder Kooperationen melde dich gerne.",
-          "E-Mail: hello@svamp.studio",
+          "E-Mail: svampstudios.com@svampstudios.com",
           "Instagram: @svamp.studios",
           "Wir antworten in der Regel innerhalb von 1–2 Werktagen."
         ],
@@ -206,7 +206,7 @@ const resources = {
         ],
         returns: [
           "Rücksendungen sind innerhalb von 14 Tagen nach Erhalt möglich, sofern die Artikel ungetragen und mit Etikett sind.",
-          "Für eine Rücksendung kontaktiere uns unter hello@svamp.studio mit deiner Bestellnummer.",
+          "Für eine Rücksendung kontaktiere uns unter svampstudios.com@svampstudios.com mit deiner Bestellnummer.",
           "Rückerstattungen erfolgen innerhalb von 7 Werktagen nach Eingang der Rücksendung.",
           "Sale-Artikel und Accessoires sind vom Umtausch ausgeschlossen."
         ],
@@ -269,7 +269,7 @@ const resources = {
       info: {
         contact: [
           "Nous serions ravis de vous lire. Pour toute question sur les commandes, les produits ou les collaborations, contactez notre équipe.",
-          "E-mail : hello@svamp.studio",
+          "E-mail : svampstudios.com@svampstudios.com",
           "Instagram : @svamp.studios",
           "Nous répondons sous 1 à 2 jours ouvrés."
         ],
@@ -281,7 +281,7 @@ const resources = {
         ],
         returns: [
           "Les retours sont acceptés sous 14 jours après réception, pour les articles non portés avec étiquettes.",
-          "Pour initier un retour, contactez hello@svamp.studio avec votre numéro de commande.",
+          "Pour initier un retour, contactez svampstudios.com@svampstudios.com avec votre numéro de commande.",
           "Les remboursements sont effectués sous 7 jours ouvrés après réception du retour.",
           "Les articles soldés et accessoires ne sont ni repris ni échangés."
         ],

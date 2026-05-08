@@ -266,6 +266,40 @@ const resources = {
           contact: "Contact", delivery: "Livraison", returns: "Retours", sizeGuide: "Guide des tailles", faq: "FAQ"
         }
       },
+      info: {
+        contact: [
+          "Nous serions ravis de vous lire. Pour toute question sur les commandes, les produits ou les collaborations, contactez notre équipe.",
+          "E-mail : hello@svamp.studio",
+          "Instagram : @svamp.studios",
+          "Nous répondons sous 1 à 2 jours ouvrés."
+        ],
+        delivery: [
+          "Nous expédions dans le monde entier depuis notre studio. Les commandes sont traitées sous 1 à 3 jours ouvrés.",
+          "Livraison standard : 3 à 7 jours ouvrés.",
+          "Livraison express : 1 à 3 jours ouvrés.",
+          "Les frais de port sont calculés au paiement selon la destination."
+        ],
+        returns: [
+          "Les retours sont acceptés sous 14 jours après réception, pour les articles non portés avec étiquettes.",
+          "Pour initier un retour, contactez hello@svamp.studio avec votre numéro de commande.",
+          "Les remboursements sont effectués sous 7 jours ouvrés après réception du retour.",
+          "Les articles soldés et accessoires ne sont ni repris ni échangés."
+        ],
+        sizeGuide: [
+          "Nos pièces sont coupées dans un esprit oversize. Entre deux tailles, choisissez la plus petite pour un ajustement près du corps ou la plus grande pour un look ample.",
+          "XS : poitrine 86 cm / taille 68 cm",
+          "S : poitrine 92 cm / taille 74 cm",
+          "M : poitrine 98 cm / taille 80 cm",
+          "L : poitrine 104 cm / taille 86 cm",
+          "XL : poitrine 110 cm / taille 92 cm"
+        ],
+        faq: [
+          "Où sont fabriquées vos pièces ? — Dessinées dans notre studio et produites en petites séries avec des partenaires de confiance.",
+          "Quels moyens de paiement acceptez-vous ? — Toutes les cartes principales et portefeuilles numériques.",
+          "Puis-je modifier ou annuler ma commande ? — Contactez-nous dans les 12 heures suivant la commande.",
+          "Réapprovisionnez-vous les articles épuisés ? — Certaines pièces oui, suivez-nous sur Instagram."
+        ]
+      },
       lang: { label: "Langue" }
     },
   },

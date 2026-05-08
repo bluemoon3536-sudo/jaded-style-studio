@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Womenswear from "./pages/Womenswear.tsx";
 import Menswear from "./pages/Menswear.tsx";
+import InfoPage from "./pages/InfoPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import { CartProvider } from "./context/CartContext";
 import CartDrawer from "./components/CartDrawer";

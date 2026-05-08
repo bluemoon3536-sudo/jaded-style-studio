@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProductGrid from "@/components/ProductGrid";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import heroMen from "@/assets/hero-men.jpg";
@@ -35,12 +36,7 @@ const Menswear = () => {
           </div>
         </section>
 
-        {/* PRODUCTS PLACEHOLDER */}
-        <section className="container mx-auto px-4 py-20 md:py-28 text-center">
-          <p className="text-muted-foreground text-sm md:text-base tracking-[0.15em] uppercase">
-            {t("page.comingSoon")}
-          </p>
-        </section>
+        <ProductGrid query="tag:men OR product_type:Men" title={t("hero.men")} />
       </main>
       <Footer />
     </div>

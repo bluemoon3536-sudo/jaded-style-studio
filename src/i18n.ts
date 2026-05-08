@@ -191,6 +191,40 @@ const resources = {
           contact: "Kontakt", delivery: "Lieferung", returns: "Rücksendungen", sizeGuide: "Größentabelle", faq: "FAQ"
         }
       },
+      info: {
+        contact: [
+          "Wir freuen uns, von dir zu hören. Bei Fragen zu Bestellungen, Produkten oder Kooperationen melde dich gerne.",
+          "E-Mail: hello@svamp.studio",
+          "Instagram: @svamp.studios",
+          "Wir antworten in der Regel innerhalb von 1–2 Werktagen."
+        ],
+        delivery: [
+          "Wir versenden weltweit aus unserem Studio. Bestellungen werden innerhalb von 1–3 Werktagen bearbeitet.",
+          "Standardversand: 3–7 Werktage.",
+          "Expressversand: 1–3 Werktage.",
+          "Versandkosten werden an der Kasse je nach Zielort berechnet."
+        ],
+        returns: [
+          "Rücksendungen sind innerhalb von 14 Tagen nach Erhalt möglich, sofern die Artikel ungetragen und mit Etikett sind.",
+          "Für eine Rücksendung kontaktiere uns unter hello@svamp.studio mit deiner Bestellnummer.",
+          "Rückerstattungen erfolgen innerhalb von 7 Werktagen nach Eingang der Rücksendung.",
+          "Sale-Artikel und Accessoires sind vom Umtausch ausgeschlossen."
+        ],
+        sizeGuide: [
+          "Unsere Stücke haben einen lockeren Schnitt. Bei Zwischengrößen empfehlen wir eine Nummer kleiner für eine taillierte Passform oder größer für einen Oversize-Look.",
+          "XS: Brust 86 cm / Taille 68 cm",
+          "S: Brust 92 cm / Taille 74 cm",
+          "M: Brust 98 cm / Taille 80 cm",
+          "L: Brust 104 cm / Taille 86 cm",
+          "XL: Brust 110 cm / Taille 92 cm"
+        ],
+        faq: [
+          "Wo werden eure Stücke produziert? — Designt in unserem Studio und in kleinen Chargen mit vertrauten Partnern produziert.",
+          "Welche Zahlungsmethoden akzeptiert ihr? — Alle gängigen Kreditkarten und digitalen Wallets.",
+          "Kann ich meine Bestellung ändern oder stornieren? — Melde dich innerhalb von 12 Stunden nach der Bestellung.",
+          "Werden ausverkaufte Artikel nachproduziert? — Einige Stücke ja, folge uns auf Instagram für Updates."
+        ]
+      },
       lang: { label: "Sprache" }
     },
   },

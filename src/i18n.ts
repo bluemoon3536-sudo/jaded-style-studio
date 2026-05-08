@@ -41,6 +41,40 @@ const resources = {
           contact: "Contact Us", delivery: "Delivery", returns: "Returns", sizeGuide: "Size Guide", faq: "FAQ"
         }
       },
+      info: {
+        contact: [
+          "We'd love to hear from you. For any questions about orders, products or collaborations, reach out to our team.",
+          "Email: hello@svamp.studio",
+          "Instagram: @svamp.studios",
+          "We aim to reply within 1–2 business days."
+        ],
+        delivery: [
+          "We ship worldwide from our studio. Orders are processed within 1–3 business days.",
+          "Standard delivery: 3–7 business days.",
+          "Express delivery: 1–3 business days.",
+          "Shipping costs are calculated at checkout based on destination."
+        ],
+        returns: [
+          "We offer returns within 14 days of delivery on unworn items in original condition with tags attached.",
+          "To start a return, contact us at hello@svamp.studio with your order number.",
+          "Refunds are processed within 7 business days after we receive your return.",
+          "Sale items and accessories are final sale."
+        ],
+        sizeGuide: [
+          "Our pieces are designed with a relaxed fit. If you're between sizes, we recommend sizing down for a tailored look or up for an oversized feel.",
+          "XS: chest 86 cm / waist 68 cm",
+          "S: chest 92 cm / waist 74 cm",
+          "M: chest 98 cm / waist 80 cm",
+          "L: chest 104 cm / waist 86 cm",
+          "XL: chest 110 cm / waist 92 cm"
+        ],
+        faq: [
+          "Where are your pieces made? — Designed in our studio and produced in small batches with trusted partners.",
+          "What payment methods do you accept? — All major credit cards and digital wallets.",
+          "Can I change or cancel my order? — Contact us within 12 hours of placing your order.",
+          "Do you restock sold-out items? — Some pieces are restocked, follow us on Instagram for updates."
+        ]
+      },
       lang: { label: "Language" }
     },
   },
@@ -81,6 +115,40 @@ const resources = {
         links: {
           contact: "İletişim", delivery: "Teslimat", returns: "İadeler", sizeGuide: "Beden Rehberi", faq: "SSS"
         }
+      },
+      info: {
+        contact: [
+          "Sizden haber almak isteriz. Sipariş, ürün veya iş birlikleri hakkındaki sorularınız için bize ulaşın.",
+          "E-posta: hello@svamp.studio",
+          "Instagram: @svamp.studios",
+          "Yanıt süremiz 1–2 iş günüdür."
+        ],
+        delivery: [
+          "Tüm dünyaya stüdyomuzdan kargolama yapıyoruz. Siparişler 1–3 iş günü içinde hazırlanır.",
+          "Standart teslimat: 3–7 iş günü.",
+          "Hızlı teslimat: 1–3 iş günü.",
+          "Kargo ücretleri ödeme adımında varış noktasına göre hesaplanır."
+        ],
+        returns: [
+          "Etiketleri üzerinde, kullanılmamış ürünler için teslimat tarihinden itibaren 14 gün içinde iade kabul ediyoruz.",
+          "İade başlatmak için sipariş numaranızla hello@svamp.studio adresine yazın.",
+          "İade ürünü tarafımıza ulaştıktan sonra para iadeniz 7 iş günü içinde yapılır.",
+          "İndirimli ürünler ve aksesuarlar iade edilemez."
+        ],
+        sizeGuide: [
+          "Parçalarımız rahat bir kalıpla tasarlanmıştır. İki beden arasında kaldıysanız, daha oturan bir görünüm için küçük, oversize için büyük bedeni öneririz.",
+          "XS: göğüs 86 cm / bel 68 cm",
+          "S: göğüs 92 cm / bel 74 cm",
+          "M: göğüs 98 cm / bel 80 cm",
+          "L: göğüs 104 cm / bel 86 cm",
+          "XL: göğüs 110 cm / bel 92 cm"
+        ],
+        faq: [
+          "Ürünleriniz nerede üretiliyor? — Stüdyomuzda tasarlanır, güvendiğimiz iş ortaklarıyla küçük partiler halinde üretilir.",
+          "Hangi ödeme yöntemlerini kabul ediyorsunuz? — Tüm büyük kredi kartları ve dijital cüzdanlar.",
+          "Siparişimi değiştirebilir veya iptal edebilir miyim? — Sipariş verdikten sonraki 12 saat içinde bize ulaşın.",
+          "Tükenen ürünler tekrar gelir mi? — Bazı parçalar tekrar gelir, güncellemeler için Instagram'dan bizi takip edin."
+        ]
       },
       lang: { label: "Dil" }
     },
@@ -123,6 +191,40 @@ const resources = {
           contact: "Kontakt", delivery: "Lieferung", returns: "Rücksendungen", sizeGuide: "Größentabelle", faq: "FAQ"
         }
       },
+      info: {
+        contact: [
+          "Wir freuen uns, von dir zu hören. Bei Fragen zu Bestellungen, Produkten oder Kooperationen melde dich gerne.",
+          "E-Mail: hello@svamp.studio",
+          "Instagram: @svamp.studios",
+          "Wir antworten in der Regel innerhalb von 1–2 Werktagen."
+        ],
+        delivery: [
+          "Wir versenden weltweit aus unserem Studio. Bestellungen werden innerhalb von 1–3 Werktagen bearbeitet.",
+          "Standardversand: 3–7 Werktage.",
+          "Expressversand: 1–3 Werktage.",
+          "Versandkosten werden an der Kasse je nach Zielort berechnet."
+        ],
+        returns: [
+          "Rücksendungen sind innerhalb von 14 Tagen nach Erhalt möglich, sofern die Artikel ungetragen und mit Etikett sind.",
+          "Für eine Rücksendung kontaktiere uns unter hello@svamp.studio mit deiner Bestellnummer.",
+          "Rückerstattungen erfolgen innerhalb von 7 Werktagen nach Eingang der Rücksendung.",
+          "Sale-Artikel und Accessoires sind vom Umtausch ausgeschlossen."
+        ],
+        sizeGuide: [
+          "Unsere Stücke haben einen lockeren Schnitt. Bei Zwischengrößen empfehlen wir eine Nummer kleiner für eine taillierte Passform oder größer für einen Oversize-Look.",
+          "XS: Brust 86 cm / Taille 68 cm",
+          "S: Brust 92 cm / Taille 74 cm",
+          "M: Brust 98 cm / Taille 80 cm",
+          "L: Brust 104 cm / Taille 86 cm",
+          "XL: Brust 110 cm / Taille 92 cm"
+        ],
+        faq: [
+          "Wo werden eure Stücke produziert? — Designt in unserem Studio und in kleinen Chargen mit vertrauten Partnern produziert.",
+          "Welche Zahlungsmethoden akzeptiert ihr? — Alle gängigen Kreditkarten und digitalen Wallets.",
+          "Kann ich meine Bestellung ändern oder stornieren? — Melde dich innerhalb von 12 Stunden nach der Bestellung.",
+          "Werden ausverkaufte Artikel nachproduziert? — Einige Stücke ja, folge uns auf Instagram für Updates."
+        ]
+      },
       lang: { label: "Sprache" }
     },
   },
@@ -163,6 +265,40 @@ const resources = {
         links: {
           contact: "Contact", delivery: "Livraison", returns: "Retours", sizeGuide: "Guide des tailles", faq: "FAQ"
         }
+      },
+      info: {
+        contact: [
+          "Nous serions ravis de vous lire. Pour toute question sur les commandes, les produits ou les collaborations, contactez notre équipe.",
+          "E-mail : hello@svamp.studio",
+          "Instagram : @svamp.studios",
+          "Nous répondons sous 1 à 2 jours ouvrés."
+        ],
+        delivery: [
+          "Nous expédions dans le monde entier depuis notre studio. Les commandes sont traitées sous 1 à 3 jours ouvrés.",
+          "Livraison standard : 3 à 7 jours ouvrés.",
+          "Livraison express : 1 à 3 jours ouvrés.",
+          "Les frais de port sont calculés au paiement selon la destination."
+        ],
+        returns: [
+          "Les retours sont acceptés sous 14 jours après réception, pour les articles non portés avec étiquettes.",
+          "Pour initier un retour, contactez hello@svamp.studio avec votre numéro de commande.",
+          "Les remboursements sont effectués sous 7 jours ouvrés après réception du retour.",
+          "Les articles soldés et accessoires ne sont ni repris ni échangés."
+        ],
+        sizeGuide: [
+          "Nos pièces sont coupées dans un esprit oversize. Entre deux tailles, choisissez la plus petite pour un ajustement près du corps ou la plus grande pour un look ample.",
+          "XS : poitrine 86 cm / taille 68 cm",
+          "S : poitrine 92 cm / taille 74 cm",
+          "M : poitrine 98 cm / taille 80 cm",
+          "L : poitrine 104 cm / taille 86 cm",
+          "XL : poitrine 110 cm / taille 92 cm"
+        ],
+        faq: [
+          "Où sont fabriquées vos pièces ? — Dessinées dans notre studio et produites en petites séries avec des partenaires de confiance.",
+          "Quels moyens de paiement acceptez-vous ? — Toutes les cartes principales et portefeuilles numériques.",
+          "Puis-je modifier ou annuler ma commande ? — Contactez-nous dans les 12 heures suivant la commande.",
+          "Réapprovisionnez-vous les articles épuisés ? — Certaines pièces oui, suivez-nous sur Instagram."
+        ]
       },
       lang: { label: "Langue" }
     },

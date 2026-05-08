@@ -1,5 +1,6 @@
 import { Plus } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -18,11 +19,11 @@ const Footer = () => {
       key: "customerService",
       title: t("footer.customerService"),
       links: [
-        t("footer.links.contact"),
-        t("footer.links.delivery"),
-        t("footer.links.returns"),
-        t("footer.links.sizeGuide"),
-        t("footer.links.faq"),
+        { label: t("footer.links.contact"), to: "/contact" },
+        { label: t("footer.links.delivery"), to: "/delivery" },
+        { label: t("footer.links.returns"), to: "/returns" },
+        { label: t("footer.links.sizeGuide"), to: "/size-guide" },
+        { label: t("footer.links.faq"), to: "/faq" },
       ],
     },
   ];
@@ -56,13 +57,13 @@ const Footer = () => {
                   } md:block`}
                 >
                   {section.links.map((link) => (
-                    <li key={link}>
-                      <a
-                        href="#"
+                    <li key={link.to}>
+                      <Link
+                        to={link.to}
                         className="text-footer-muted text-xs hover:text-footer-foreground transition-colors"
                       >
-                        {link}
-                      </a>
+                        {link.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>

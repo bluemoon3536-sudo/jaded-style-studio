@@ -41,6 +41,40 @@ const resources = {
           contact: "Contact Us", delivery: "Delivery", returns: "Returns", sizeGuide: "Size Guide", faq: "FAQ"
         }
       },
+      info: {
+        contact: [
+          "We'd love to hear from you. For any questions about orders, products or collaborations, reach out to our team.",
+          "Email: hello@svamp.studio",
+          "Instagram: @svamp.studios",
+          "We aim to reply within 1–2 business days."
+        ],
+        delivery: [
+          "We ship worldwide from our studio. Orders are processed within 1–3 business days.",
+          "Standard delivery: 3–7 business days.",
+          "Express delivery: 1–3 business days.",
+          "Shipping costs are calculated at checkout based on destination."
+        ],
+        returns: [
+          "We offer returns within 14 days of delivery on unworn items in original condition with tags attached.",
+          "To start a return, contact us at hello@svamp.studio with your order number.",
+          "Refunds are processed within 7 business days after we receive your return.",
+          "Sale items and accessories are final sale."
+        ],
+        sizeGuide: [
+          "Our pieces are designed with a relaxed fit. If you're between sizes, we recommend sizing down for a tailored look or up for an oversized feel.",
+          "XS: chest 86 cm / waist 68 cm",
+          "S: chest 92 cm / waist 74 cm",
+          "M: chest 98 cm / waist 80 cm",
+          "L: chest 104 cm / waist 86 cm",
+          "XL: chest 110 cm / waist 92 cm"
+        ],
+        faq: [
+          "Where are your pieces made? — Designed in our studio and produced in small batches with trusted partners.",
+          "What payment methods do you accept? — All major credit cards and digital wallets.",
+          "Can I change or cancel my order? — Contact us within 12 hours of placing your order.",
+          "Do you restock sold-out items? — Some pieces are restocked, follow us on Instagram for updates."
+        ]
+      },
       lang: { label: "Language" }
     },
   },

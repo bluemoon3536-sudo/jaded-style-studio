@@ -57,13 +57,13 @@ const Footer = () => {
                   } md:block`}
                 >
                   {section.links.map((link) => (
-                    <li key={link}>
-                      <a
-                        href="#"
+                    <li key={link.to}>
+                      <Link
+                        to={link.to}
                         className="text-footer-muted text-xs hover:text-footer-foreground transition-colors"
                       >
-                        {link}
-                      </a>
+                        {link.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>

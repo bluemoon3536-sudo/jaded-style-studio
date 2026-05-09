@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Search, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 import { useCartStore } from "@/stores/cartStore";
 import SearchOverlay from "./SearchOverlay";
 import LanguageSwitcher from "./LanguageSwitcher";

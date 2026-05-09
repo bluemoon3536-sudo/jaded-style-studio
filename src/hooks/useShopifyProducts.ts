@@ -43,12 +43,16 @@ export function useShopifyCollection(handles: string[], first = 40) {
   return { products, loading };
 }
 
-export function useShopifyProducts(query?: string, first = 20) {
+export function useShopifyProducts(query?: string, first = 20, enabled = true) {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(enabled);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!enabled) {
+      setLoading(false);
+      return;
+    }
     let cancelled = false;
     setLoading(true);
     storefrontApiRequest(PRODUCTS_QUERY, { first, query: query ?? null })
@@ -61,7 +65,7 @@ export function useShopifyProducts(query?: string, first = 20) {
     return () => {
       cancelled = true;
     };
-  }, [query, first]);
+  }, [query, first, enabled]);
 
   return { products, loading, error };
 }

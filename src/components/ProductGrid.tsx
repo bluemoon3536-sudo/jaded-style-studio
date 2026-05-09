@@ -11,7 +11,7 @@ interface ProductGridProps {
 }
 
 const ProductGrid = ({ query, collectionHandles, title = "Trending Now" }: ProductGridProps) => {
-  const byQuery = useShopifyProducts(collectionHandles ? undefined : query);
+  const byQuery = useShopifyProducts(query, 20, !collectionHandles);
   const byCollection = useShopifyCollection(collectionHandles ?? []);
   const products = collectionHandles ? byCollection.products : byQuery.products;
   const loading = collectionHandles ? byCollection.loading : byQuery.loading;

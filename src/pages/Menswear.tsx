@@ -36,7 +36,10 @@ const Menswear = () => {
           </div>
         </section>
 
-        <ProductGrid query="tag:men OR product_type:Men" title={t("hero.men")} />
+        <ProductGrid
+          collectionHandles={["erkek", "erkek-giyim", "men", "menswear", "mens"]}
+          title={t("hero.men")}
+        />
       </main>
       <Footer />
     </div>

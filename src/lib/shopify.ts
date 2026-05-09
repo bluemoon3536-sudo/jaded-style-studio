@@ -103,6 +103,34 @@ export const PRODUCT_BY_HANDLE_QUERY = `
   }
 `;
 
+export const COLLECTION_PRODUCTS_QUERY = `
+  query GetCollection($handle: String!, $first: Int!) {
+    collection(handle: $handle) {
+      id
+      title
+      products(first: $first) {
+        edges {
+          node {
+            id title description handle
+            priceRange { minVariantPrice { amount currencyCode } }
+            images(first: 5) { edges { node { url altText } } }
+            variants(first: 20) {
+              edges {
+                node {
+                  id title availableForSale
+                  price { amount currencyCode }
+                  selectedOptions { name value }
+                }
+              }
+            }
+            options { name values }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export function formatPrice(amount: string, currency: string) {
   return `${currency} ${parseFloat(amount).toFixed(2)}`;
 }

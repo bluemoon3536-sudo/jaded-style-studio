@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
 import { Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
-import { useShopifyProducts } from "@/hooks/useShopifyProducts";
+import { useShopifyProducts, useShopifyCollection } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
 
 interface ProductGridProps {
   query?: string;
+  collectionHandles?: string[];
   title?: string;
 }
 
-const ProductGrid = ({ query, title = "Trending Now" }: ProductGridProps) => {
-  const { products, loading } = useShopifyProducts(query);
+const ProductGrid = ({ query, collectionHandles, title = "Trending Now" }: ProductGridProps) => {
+  const byQuery = useShopifyProducts(query, 20, !collectionHandles);
+  const byCollection = useShopifyCollection(collectionHandles ?? []);
+  const products = collectionHandles ? byCollection.products : byQuery.products;
+  const loading = collectionHandles ? byCollection.loading : byQuery.loading;
   const addItem = useCartStore((s) => s.addItem);
   const isLoading = useCartStore((s) => s.isLoading);
 

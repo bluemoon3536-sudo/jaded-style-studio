@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl supports-[backdrop-filter]:bg-black/50">
         <div className="flex items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center" aria-label="Home">
-            <img src={logo} alt="Logo" className="h-8 w-auto mix-blend-screen" />
+            <img src={logo} alt="Logo" className="h-10 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8" />

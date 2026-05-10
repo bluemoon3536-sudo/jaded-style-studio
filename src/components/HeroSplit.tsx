@@ -14,7 +14,7 @@ const HeroSplit = () => {
         <img
           src={heroWomen}
           alt={t("hero.women")}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
           width={960}
           height={1200}
         />
@@ -25,7 +25,6 @@ const HeroSplit = () => {
           </h2>
         </div>
       </Link>
-
       <Link
         to="/menswear"
         className="relative flex-1 overflow-hidden group cursor-pointer h-[50vh] md:h-auto"
@@ -33,7 +32,7 @@ const HeroSplit = () => {
         <img
           src={heroMen}
           alt={t("hero.men")}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
           width={960}
           height={1200}
         />
